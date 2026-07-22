@@ -79,3 +79,15 @@
     <img src="https://github-readme-stats.shion.dev/api/pin/?username=MuditRanjan000&repo=AutoReel&theme=dark" alt="AutoReel" />
   </a>
 </div>
+
+<br/>
+
+## 🐍 Contribution Snake
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake.svg">
+  </picture>
+</div>
