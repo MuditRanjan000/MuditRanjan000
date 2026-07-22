@@ -63,11 +63,11 @@
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=false&count_private=false" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.shion.dev/api?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=false&count_private=false" alt="GitHub Stats" />
   <br/>
   <img src="https://streak-stats.demolab.com/?user=MuditRanjan000&theme=dark&hide_border=true" alt="GitHub Streak" />
   <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact" alt="Top Languages" />
+  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact" alt="Top Languages" />
 </div>
 
 <br/>
@@ -84,7 +84,7 @@
 
 <div align="center">
   <a href="https://github.com/MuditRanjan000/AutoReel">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MuditRanjan000&repo=AutoReel&theme=dark" alt="AutoReel" />
+    <img src="https://github-readme-stats.shion.dev/api/pin/?username=MuditRanjan000&repo=AutoReel&theme=dark" alt="AutoReel" />
   </a>
 </div>
 
