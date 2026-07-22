@@ -10,7 +10,7 @@ OUTPUT_FILE = "dist/github-contribution-shooter.svg"
 WIDTH = 800
 HEIGHT = 250
 
-COLS = 52
+COLS = 53
 ROWS = 7
 SIZE = 10
 GAP = 3
@@ -31,6 +31,7 @@ def fetch_contributions(username, token):
             weeks {
               contributionDays {
                 date
+                weekday
                 contributionLevel
               }
             }
@@ -58,17 +59,17 @@ def fetch_contributions(username, token):
             "FOURTH_QUARTILE": 4
         }
         
-        flat = []
-        for w in weeks:
+        grid = {}
+        # Take up to the last 53 weeks
+        recent_weeks = weeks[-COLS:] if len(weeks) >= COLS else weeks
+        for c, w in enumerate(recent_weeks):
             for d in w['contributionDays']:
-                flat.append({
-                    "date": d["date"],
-                    "intensity": level_map.get(d["contributionLevel"], 0)
-                })
-        return flat
+                r = d['weekday']
+                grid[(c, r)] = level_map.get(d["contributionLevel"], 0)
+        return grid
     except Exception as e:
         print(f"Error fetching data from GraphQL: {e}")
-        return []
+        return {}
 
 def main():
     print(f"Fetching data for {USERNAME}...")
@@ -77,13 +78,9 @@ def main():
         print("GITHUB_TOKEN missing!")
         return
         
-    contribs = fetch_contributions(USERNAME, token)
-    if not contribs:
+    grid = fetch_contributions(USERNAME, token)
+    if not grid:
         return
-        
-    conts = sorted(contribs, key=lambda x: x["date"])[-(COLS*ROWS):]
-    while len(conts) < COLS*ROWS:
-        conts.insert(0, {"intensity": 0})
         
     # Setup timeline
     T = 0.0
@@ -101,8 +98,7 @@ def main():
         # find targets in this col (bottom up, row 6 to 0)
         col_targets = []
         for r in range(ROWS-1, -1, -1):
-            idx = c * ROWS + r
-            intensity = int(conts[idx].get("intensity", 0))
+            intensity = grid.get((c, r), 0)
             if intensity > 0:
                 col_targets.append((r, intensity))
                 
@@ -222,8 +218,7 @@ def main():
     # Draw Targets
     for c in range(COLS):
         for r in range(ROWS):
-            idx = c * ROWS + r
-            intensity = int(conts[idx].get("intensity", 0))
+            intensity = grid.get((c, r), 0)
             color = colors[min(4, intensity)]
             x = START_X + c * (SIZE + GAP)
             y = START_Y + r * (SIZE + GAP)
