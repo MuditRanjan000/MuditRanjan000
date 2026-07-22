@@ -3,7 +3,7 @@
 </div>
 
 # 🚀 Mudit Ranjan
-### Architecting Autonomous Systems & Quantitative AI Bots
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=0E75B6&center=false&vCenter=true&width=800&lines=Architecting+Autonomous+Systems;Building+Quantitative+AI+Bots;C%2C+Python%2C+and+Systems+Engineering" alt="Typing SVG" /></a>
 
 - 🔭 I’m currently working on **StonksAI** (an autonomous quantitative trading system) and **AutoReel** (an automated AI YouTube channel generator).
 - 👯 I’m looking to collaborate on **algorithmic trading strategies, LLM orchestration, and robust Python/C backend systems.**
@@ -82,12 +82,8 @@
 
 <br/>
 
-## 🐍 Contribution Snake
+## 📈 Commit Activity Graph
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake.svg">
-  </picture>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MuditRanjan000&bg_color=0D1117&color=0e75b6&line=0e75b6&point=ffffff&area=true&hide_border=true" alt="Commit Activity Graph" />
 </div>
