@@ -69,3 +69,16 @@
   <br/>
   <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact" alt="Top Languages" />
 </div>
+
+<br/>
+
+## 🔝 Highlighted Projects
+
+<div align="center">
+  <a href="https://github.com/MuditRanjan000/TradeBot">
+    <img src="https://github-readme-stats.shion.dev/api/pin/?username=MuditRanjan000&repo=TradeBot&theme=dark" alt="TradeBot" />
+  </a>
+  <a href="https://github.com/MuditRanjan000/AutoReel">
+    <img src="https://github-readme-stats.shion.dev/api/pin/?username=MuditRanjan000&repo=AutoReel&theme=dark" alt="AutoReel" />
+  </a>
+</div>
