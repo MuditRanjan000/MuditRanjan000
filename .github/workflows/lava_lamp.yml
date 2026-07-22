@@ -1,4 +1,4 @@
-name: Generate Audio Visualizer
+name: Generate ASMR Lava Lamp
 
 on:
   schedule:
@@ -28,10 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           
-      - name: Generate Visualizer SVG
+      - name: Generate Lava Lamp SVG
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: python .github/scripts/visualizer.py
+        run: python .github/scripts/lava_lamp.py
           
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

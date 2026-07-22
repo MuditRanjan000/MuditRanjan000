@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🎶 Neon Audio Visualizer (GitHub Contributions)
+## 🌋 ASMR Lava Lamp (GitHub Contributions)
 
 <div align="center">
-  <img alt="github contribution visualizer" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-visualizer.svg">
+  <img alt="github contribution lava lamp" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-lava.svg">
 </div>
 
 <br/>
