@@ -28,6 +28,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install Pillow requests
           
+      - name: Download Font
+        run: wget -O matrix_font.ttf https://github.com/google/fonts/raw/main/ofl/sharetechmono/ShareTechMono-Regular.ttf
+          
       - name: Generate Matrix Rain GIF
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
