@@ -1,4 +1,4 @@
-name: Generate Space Shooter
+name: Generate Crystal Growth Animation
 
 on:
   schedule:
@@ -28,11 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           
-      - name: Generate Space Shooter SVG
+      - name: Generate Crystal Growth SVG
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python .github/scripts/space_shooter.py
+        run: python .github/scripts/crystal_growth.py
           
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🚀 GitHub Space Shooter
+## 💎 Crystal Growth Energy-Minimization
 
 <div align="center">
-  <img alt="github contribution space shooter" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-shooter.svg">
+  <img alt="github contribution crystal growth" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-crystal.svg">
 </div>
 
 <br/>
