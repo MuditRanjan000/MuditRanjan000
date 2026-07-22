@@ -21,20 +21,63 @@ GRID_H = ROWS * (SIZE + GAP) - GAP
 START_X = (WIDTH - GRID_W) / 2
 START_Y = (HEIGHT - GRID_H) / 2 - 20 
 
-def fetch_contributions(username):
-    url = f"https://github-contributions.vercel.app/api/v1/{username}"
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+def fetch_contributions(username, token):
+    url = "https://api.github.com/graphql"
+    query = """
+    query($userName:String!) {
+      user(login: $userName){
+        contributionsCollection {
+          contributionCalendar {
+            weeks {
+              contributionDays {
+                date
+                contributionLevel
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+    data = json.dumps({"query": query, "variables": {"userName": username}}).encode('utf-8')
+    req = urllib.request.Request(url, data=data, headers={
+        'Authorization': f'Bearer {token}',
+        'Content-Type': 'application/json',
+        'User-Agent': 'Mozilla/5.0'
+    })
     try:
         with urllib.request.urlopen(req) as response:
-            data = json.loads(response.read().decode())
-        return data["contributions"]
+            resp_data = json.loads(response.read().decode())
+            
+        weeks = resp_data['data']['user']['contributionsCollection']['contributionCalendar']['weeks']
+        level_map = {
+            "NONE": 0,
+            "FIRST_QUARTILE": 1,
+            "SECOND_QUARTILE": 2,
+            "THIRD_QUARTILE": 3,
+            "FOURTH_QUARTILE": 4
+        }
+        
+        flat = []
+        for w in weeks:
+            for d in w['contributionDays']:
+                flat.append({
+                    "date": d["date"],
+                    "intensity": level_map.get(d["contributionLevel"], 0)
+                })
+        return flat
     except Exception as e:
-        print(f"Error fetching data: {e}")
+        print(f"Error fetching data from GraphQL: {e}")
         return []
 
 def main():
     print(f"Fetching data for {USERNAME}...")
-    contribs = fetch_contributions(USERNAME)
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        print("GITHUB_TOKEN missing!")
+        return
+        
+    contribs = fetch_contributions(USERNAME, token)
     if not contribs:
         return
         
