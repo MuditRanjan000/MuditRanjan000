@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🗺️ Continuous Topographic Contours
+## 🌊 Macroscopic Moiré Interference Fringes
 
 <div align="center">
-  <img alt="github contribution topographic contours" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-topography.svg">
+  <img alt="github contribution moire fringes" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-moire.svg">
 </div>
 
 <br/>
