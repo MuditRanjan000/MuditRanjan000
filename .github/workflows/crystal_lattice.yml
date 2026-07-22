@@ -1,4 +1,4 @@
-name: Generate ASMR Lava Lamp
+name: Generate Crystal Lattice Simulation
 
 on:
   schedule:
@@ -28,10 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           
-      - name: Generate Lava Lamp SVG
+      - name: Generate Crystal Lattice SVG
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: python .github/scripts/lava_lamp.py
+        run: python .github/scripts/crystal_lattice.py
           
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

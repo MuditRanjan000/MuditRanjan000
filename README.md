@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🌋 ASMR Lava Lamp (GitHub Contributions)
+## 💎 Crystal Growth Relaxation (Molecular Dynamics)
 
 <div align="center">
-  <img alt="github contribution lava lamp" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-lava.svg">
+  <img alt="github contribution crystal lattice" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-crystal.svg">
 </div>
 
 <br/>
