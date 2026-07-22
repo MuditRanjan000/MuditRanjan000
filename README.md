@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🌌 Generative Particle Flow Field (GitHub Contributions)
+## 🎶 Neon Audio Visualizer (GitHub Contributions)
 
 <div align="center">
-  <img alt="github contribution flow field" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-flow.gif">
+  <img alt="github contribution visualizer" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-visualizer.svg">
 </div>
 
 <br/>
