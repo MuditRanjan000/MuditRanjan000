@@ -72,10 +72,10 @@
 
 <br/>
 
-## 💎 Crystal Growth Relaxation (Molecular Dynamics)
+## 🐝 Voronoi Honeycomb Relaxation
 
 <div align="center">
-  <img alt="github contribution crystal lattice" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-crystal.svg">
+  <img alt="github contribution voronoi honeycomb" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-honeycomb.svg">
 </div>
 
 <br/>

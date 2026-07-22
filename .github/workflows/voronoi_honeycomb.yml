@@ -1,4 +1,4 @@
-name: Generate Crystal Lattice Simulation
+name: Generate Voronoi Honeycomb Simulation
 
 on:
   schedule:
@@ -28,10 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           
-      - name: Generate Crystal Lattice SVG
+      - name: Generate Voronoi Honeycomb SVG
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: python .github/scripts/crystal_lattice.py
+        run: python .github/scripts/voronoi_honeycomb.py
           
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
