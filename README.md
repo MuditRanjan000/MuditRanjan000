@@ -69,19 +69,3 @@
   <br/>
   <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact" alt="Top Languages" />
 </div>
-
-<br/>
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MuditRanjan000&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Trophies" />
-</div>
-
-<br/>
-
-## 🔝 Top Contributed Repositories
-
-<div align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=MuditRanjan000&limit=5&theme=dark&combine_all_yearly_contributions=true" alt="Top Contributed Repos" />
-</div>
