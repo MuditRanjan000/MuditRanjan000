@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🟢 Matrix Digital Rain (GitHub Contributions)
+## 🌌 Generative Particle Flow Field (GitHub Contributions)
 
 <div align="center">
-  <img alt="github contribution matrix rain" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-matrix.gif">
+  <img alt="github contribution flow field" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-flow.gif">
 </div>
 
 <br/>

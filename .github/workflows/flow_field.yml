@@ -1,4 +1,4 @@
-name: Generate Matrix Digital Rain
+name: Generate Particle Flow Field
 
 on:
   schedule:
@@ -28,13 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install Pillow requests
           
-      - name: Download Font
-        run: wget -O matrix_font.ttf https://github.com/google/fonts/raw/main/ofl/sharetechmono/ShareTechMono-Regular.ttf
-          
-      - name: Generate Matrix Rain GIF
+      - name: Generate Flow Field GIF
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: python .github/scripts/matrix_rain.py
+        run: python .github/scripts/flow_field.py
           
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
