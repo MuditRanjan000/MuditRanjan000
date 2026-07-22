@@ -1,4 +1,4 @@
-name: Generate Voronoi Honeycomb Simulation
+name: Generate Topographic Contours
 
 on:
   schedule:
@@ -26,12 +26,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          pip install requests scipy scikit-image numpy
           
-      - name: Generate Voronoi Honeycomb SVG
+      - name: Generate Topographic Contours SVG
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: python .github/scripts/voronoi_honeycomb.py
+        run: python .github/scripts/topographic_contours.py
           
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

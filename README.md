@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🐝 Voronoi Honeycomb Relaxation
+## 🗺️ Continuous Topographic Contours
 
 <div align="center">
-  <img alt="github contribution voronoi honeycomb" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-honeycomb.svg">
+  <img alt="github contribution topographic contours" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-topography.svg">
 </div>
 
 <br/>
