@@ -1,4 +1,4 @@
-name: Generate Macroscopic Moiré Fringes
+name: Generate Space Shooter
 
 on:
   schedule:
@@ -26,12 +26,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests scipy numpy pillow
+          pip install requests
           
-      - name: Generate Moiré Fringes SVG
+      - name: Generate Space Shooter SVG
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: python .github/scripts/moire_fringes.py
+        run: python .github/scripts/space_shooter.py
           
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

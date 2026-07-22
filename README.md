@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🌊 Macroscopic Moiré Interference Fringes
+## 🚀 GitHub Space Shooter
 
 <div align="center">
-  <img alt="github contribution moire fringes" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-moire.svg">
+  <img alt="github contribution space shooter" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-shooter.svg">
 </div>
 
 <br/>
