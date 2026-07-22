@@ -82,8 +82,12 @@
 
 <br/>
 
-## 📈 Commit Activity Graph
+## 🐍 Contribution Snake
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MuditRanjan000&bg_color=0D1117&color=0e75b6&line=0e75b6&point=ffffff&area=true&hide_border=true" alt="Commit Activity Graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/dist/github-contribution-grid-snake.svg">
+  </picture>
 </div>
