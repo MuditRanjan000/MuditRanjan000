@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🦠 Conway's Game of Life (GitHub Contributions)
+## 🟢 Matrix Digital Rain (GitHub Contributions)
 
 <div align="center">
-  <img alt="github contribution game of life" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-game-of-life.gif">
+  <img alt="github contribution matrix rain" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-matrix.gif">
 </div>
 
 <br/>

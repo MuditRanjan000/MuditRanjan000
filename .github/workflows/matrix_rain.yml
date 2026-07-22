@@ -1,4 +1,4 @@
-name: Generate Conway's Game of Life
+name: Generate Matrix Digital Rain
 
 on:
   schedule:
@@ -28,10 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install Pillow requests
           
-      - name: Generate Game of Life GIF
+      - name: Generate Matrix Rain GIF
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: python .github/scripts/game_of_life.py
+        run: python .github/scripts/matrix_rain.py
           
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
