@@ -72,7 +72,7 @@
 
 <br/>
 
-## 🏮 GitHub Contribution Firefly
+## 🏮 Thanks for checking out my GitHub!
 
 <div align="center">
   <img alt="GitHub Contribution Firefly Lantern-Lighter" src="github-contribution-firefly.svg">
