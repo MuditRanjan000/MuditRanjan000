@@ -111,7 +111,7 @@ for c in range(52):
             })
 
 total_cells = len(cells)
-hop_time = 0.05  # Faster hops for 364 cells
+hop_time = 0.15  # Slower, smoother hops
 max_count = quartiles[-1] if quartiles[-1] > 0 else 1
 
 current_time = 0.0
@@ -119,12 +119,12 @@ for i, cell in enumerate(cells):
     if i > 0:
         current_time += hop_time
     
-    # Exaggerated Pacing: map count to pause (0s to 0.1s for 364 cells)
-    c_pause = 0.0 if cell["count"] == 0 else 0.02 + (cell["count"] / max_count) * 0.08
+    # Exaggerated Pacing: longer pauses on intense days to feel the rhythm
+    c_pause = 0.0 if cell["count"] == 0 else 0.05 + (cell["count"] / max_count) * 0.25
     cell["arrival_time"] = current_time
     current_time += c_pause
 
-total_duration = current_time + 2.0  # +2s full board pause
+total_duration = current_time + 3.0  # +3s full board pause
 
 cell_arrival_times = []
 motion_key_times = []
@@ -150,25 +150,25 @@ for i, cell in enumerate(cells):
         
         mx, my = px + dx / 2, py + dy / 2
         nx, ny = -dy / dist, dx / dist
-        arc_h = 10 if dx > 0 else 5  # smaller arc for short jumps down columns
+        arc_h = 15 if dx > 0 else 8  # More pronounced vertical arc
         qx, qy = mx + nx * arc_h, my + ny * arc_h
         
-        # Midpoint of hop
+        # Midpoint of hop (Accelerate UP)
         mid_time = current_time + hop_time / 2
         motion_key_times.append(mid_time / total_duration)
         translate_values.append(f"{qx:.1f},{qy:.1f}")
-        motion_key_splines.append("0.42 0.0 0.58 1.0") # ease-in-out
+        motion_key_splines.append("0.33 0.0 1.0 1.0") # ease-in
         
-        # End of hop (Arrival)
+        # End of hop (Decelerate DOWN)
         current_time += hop_time
         t = current_time / total_duration
         motion_key_times.append(t)
         translate_values.append(f"{x},{y}")
         cell_arrival_times.append(t)
-        motion_key_splines.append("0.42 0.0 0.58 1.0")
+        motion_key_splines.append("0.0 0.0 0.67 1.0") # ease-out
         
     # Pause
-    c_pause = 0.0 if cell["count"] == 0 else 0.02 + (cell["count"] / max_count) * 0.08
+    c_pause = 0.0 if cell["count"] == 0 else 0.05 + (cell["count"] / max_count) * 0.25
     current_time += c_pause
     t = current_time / total_duration
     motion_key_times.append(t)
