@@ -1,0 +1,1332 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="250" viewBox="0 0 800 250">
+<rect width="800" height="250" fill="#0d1117" rx="8" />
+<defs>
+  <pattern id="stars1" width="200" height="200" patternUnits="userSpaceOnUse">
+    <circle cx="84" cy="21" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="3" cy="62" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="92" cy="113" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="136" cy="22" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="68" cy="134" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="123" cy="73" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="3" cy="29" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="33" cy="143" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="191" cy="92" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="119" cy="175" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="195" cy="83" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="65" cy="96" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="178" cy="165" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="13" cy="50" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="91" cy="195" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="87" cy="97" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="150" cy="168" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="94" cy="181" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="6" cy="135" r="0.5" fill="#fff" opacity="0.5"/>
+    <circle cx="185" cy="184" r="0.5" fill="#fff" opacity="0.5"/>
+  </pattern>
+  <pattern id="stars2" width="300" height="300" patternUnits="userSpaceOnUse">
+    <circle cx="270" cy="276" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="150" cy="247" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="137" cy="193" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="22" cy="19" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="48" cy="237" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="1" cy="52" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="50" cy="195" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="103" cy="233" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="237" cy="26" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="243" cy="98" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="203" cy="90" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="208" cy="284" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="186" cy="206" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="207" cy="299" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="83" cy="240" r="1" fill="#fff" opacity="0.8"/>
+  </pattern>
+</defs>
+<style>
+@keyframes star_move { 0% { transform: translateX(0); } 100% { transform: translateX(-200px); } }
+@keyframes star_move2 { 0% { transform: translateX(0); } 100% { transform: translateX(-300px); } }
+</style>
+<g style="animation: star_move 20s linear infinite;">
+  <rect x="0" y="0" width="1000" height="250" fill="url(#stars1)" />
+</g>
+<g style="animation: star_move2 15s linear infinite;">
+  <rect x="0" y="0" width="1100" height="250" fill="url(#stars2)" />
+</g>
+<style>
+@keyframes ship_move {
+  0.00% { transform: translateX(-50px); }
+  5.70% { transform: translateX(-50px); }
+  6.65% { transform: translateX(219.5px); }
+  10.45% { transform: translateX(219.5px); }
+  11.40% { transform: translateX(232.5px); }
+  13.78% { transform: translateX(232.5px); }
+  14.73% { transform: translateX(245.5px); }
+  17.81% { transform: translateX(245.5px); }
+  18.76% { transform: translateX(258.5px); }
+  24.23% { transform: translateX(258.5px); }
+  25.18% { transform: translateX(336.5px); }
+  26.84% { transform: translateX(336.5px); }
+  27.79% { transform: translateX(349.5px); }
+  37.29% { transform: translateX(349.5px); }
+  38.24% { transform: translateX(362.5px); }
+  44.89% { transform: translateX(362.5px); }
+  45.84% { transform: translateX(375.5px); }
+  51.78% { transform: translateX(375.5px); }
+  52.73% { transform: translateX(388.5px); }
+  55.11% { transform: translateX(388.5px); }
+  56.06% { transform: translateX(401.5px); }
+  62.00% { transform: translateX(401.5px); }
+  62.95% { transform: translateX(414.5px); }
+  71.02% { transform: translateX(414.5px); }
+  71.97% { transform: translateX(427.5px); }
+  88.12% { transform: translateX(427.5px); }
+  90.50% { transform: translateX(850px); }
+  99.99% { transform: translateX(850px); }
+  100% { transform: translateX(-50px); }
+}
+@keyframes target_12_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  7.93% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  8.03% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  9.03% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_12_4 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  8.74% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  8.84% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  9.84% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_12_3 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  9.54% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  9.64% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  10.64% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_12_2 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  10.35% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  10.45% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  11.45% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_13_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  12.68% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  12.78% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  13.78% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_13_2 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  13.68% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  13.78% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  14.78% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_14_6 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  15.91% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  16.01% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  17.01% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_14_4 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  16.81% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  16.91% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  17.91% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_14_3 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  17.62% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  17.72% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  18.72% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_15_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  20.04% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  20.14% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  21.14% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_15_2 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  21.04% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  21.14% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  22.14% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_15_1 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  21.85% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  21.95% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  22.95% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_21_6 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  26.36% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  26.46% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  27.46% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_22_6 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  28.97% { transform: scale(1); filter: brightness(1); }
+  29.07% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  30.57% { transform: scale(1); filter: brightness(1); }
+  29.69% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  29.79% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  30.79% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_22_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  30.49% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  30.59% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  31.59% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_22_4 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  31.30% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  31.40% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  32.40% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_22_3 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  32.11% { transform: scale(1); filter: brightness(1); }
+  32.21% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  33.71% { transform: scale(1); filter: brightness(1); }
+  32.82% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  32.92% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  33.92% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_22_2 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  33.63% { transform: scale(1); filter: brightness(1); }
+  33.73% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  35.23% { transform: scale(1); filter: brightness(1); }
+  34.34% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  34.44% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  35.44% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_22_1 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  35.15% { transform: scale(1); filter: brightness(1); }
+  35.25% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  36.75% { transform: scale(1); filter: brightness(1); }
+  35.86% { transform: scale(1); filter: brightness(1); }
+  35.96% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  37.46% { transform: scale(1); filter: brightness(1); }
+  36.57% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  36.67% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  37.67% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_22_0 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  37.38% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  37.48% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  38.48% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_23_6 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  39.42% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  39.52% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  40.52% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_23_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  40.23% { transform: scale(1); filter: brightness(1); }
+  40.33% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  41.83% { transform: scale(1); filter: brightness(1); }
+  40.95% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  41.05% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  42.05% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_23_4 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  41.75% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  41.85% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  42.85% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_23_2 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  42.66% { transform: scale(1); filter: brightness(1); }
+  42.76% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  44.26% { transform: scale(1); filter: brightness(1); }
+  43.37% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  43.47% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  44.47% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_23_1 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  44.18% { transform: scale(1); filter: brightness(1); }
+  44.28% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  45.78% { transform: scale(1); filter: brightness(1); }
+  44.89% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  44.99% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  45.99% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_24_1 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  47.50% { transform: scale(1); filter: brightness(1); }
+  47.60% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  49.10% { transform: scale(1); filter: brightness(1); }
+  48.21% { transform: scale(1); filter: brightness(1); }
+  48.31% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  49.81% { transform: scale(1); filter: brightness(1); }
+  48.93% { transform: scale(1); filter: brightness(1); }
+  49.03% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  50.53% { transform: scale(1); filter: brightness(1); }
+  49.64% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  49.74% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  50.74% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_24_0 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  50.45% { transform: scale(1); filter: brightness(1); }
+  50.55% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  52.05% { transform: scale(1); filter: brightness(1); }
+  51.16% { transform: scale(1); filter: brightness(1); }
+  51.26% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  52.76% { transform: scale(1); filter: brightness(1); }
+  51.87% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  51.97% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  52.97% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_25_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  54.01% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  54.11% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  55.11% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_25_4 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  54.82% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  54.92% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  55.92% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_26_6 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  57.24% { transform: scale(1); filter: brightness(1); }
+  57.34% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  58.84% { transform: scale(1); filter: brightness(1); }
+  57.95% { transform: scale(1); filter: brightness(1); }
+  58.05% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  59.55% { transform: scale(1); filter: brightness(1); }
+  58.66% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  58.76% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  59.76% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_26_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  59.47% { transform: scale(1); filter: brightness(1); }
+  59.57% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  61.07% { transform: scale(1); filter: brightness(1); }
+  60.19% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  60.29% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  61.29% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_26_3 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  61.09% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  61.19% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  62.19% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_26_2 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  61.90% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  62.00% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  63.00% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_27_6 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  64.13% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  64.23% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  65.23% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_27_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  64.94% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  65.04% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  66.04% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_27_4 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  65.74% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  65.84% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  66.84% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_27_3 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  66.55% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  66.65% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  67.65% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_27_2 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  67.36% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  67.46% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  68.46% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_27_1 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  68.17% { transform: scale(1); filter: brightness(1); }
+  68.27% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  69.77% { transform: scale(1); filter: brightness(1); }
+  68.88% { transform: scale(1); filter: brightness(1); }
+  68.98% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  70.48% { transform: scale(1); filter: brightness(1); }
+  69.59% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  69.69% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  70.69% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_27_0 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  70.40% { transform: scale(1); filter: brightness(1); }
+  70.50% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  72.00% { transform: scale(1); filter: brightness(1); }
+  71.11% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  71.21% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  72.21% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_28_5 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  73.25% { transform: scale(1); filter: brightness(1); }
+  73.35% { transform: scale(1.3); filter: drop-shadow(0 0 5px #58a6ff) brightness(2); }
+  74.85% { transform: scale(1); filter: brightness(1); }
+  73.96% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  74.06% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  75.06% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_28_4 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  74.77% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  74.87% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  75.87% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_28_3 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  75.58% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  75.68% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  76.68% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_28_2 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  76.38% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  76.48% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  77.48% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+@keyframes target_28_1 {
+  0% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  77.19% { transform: scale(1); filter: brightness(1); opacity: 1; }
+  77.29% { transform: scale(1.8); filter: brightness(3); opacity: 1; fill: #ff7b72; }
+  78.29% { transform: scale(0); opacity: 0; }
+  99.9% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); filter: brightness(1); opacity: 1; }
+}
+</style>
+<rect x="63.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="63.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="63.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="63.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="63.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="63.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="63.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="76.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="76.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="76.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="76.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="76.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="76.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="76.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="89.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="89.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="89.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="89.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="89.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="89.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="89.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="102.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="102.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="102.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="102.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="102.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="102.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="102.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="115.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="115.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="115.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="115.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="115.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="115.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="115.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="128.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="128.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="128.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="128.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="128.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="128.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="128.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="141.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="141.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="141.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="141.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="141.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="141.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="141.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="154.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="154.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="154.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="154.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="154.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="154.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="154.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="167.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="167.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="167.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="167.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="167.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="167.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="167.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="180.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="180.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="180.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="180.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="180.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="180.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="180.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="193.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="193.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="193.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="193.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="193.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="193.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="193.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="206.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="206.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="206.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="206.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="206.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="206.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="206.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="219.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="219.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="219.5" y="87.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_12_2 21.050000000000043s linear infinite; transform-origin: 224.5px 92.0px;" />
+<rect x="219.5" y="100.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_12_3 21.050000000000043s linear infinite; transform-origin: 224.5px 105.0px;" />
+<rect x="219.5" y="113.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_12_4 21.050000000000043s linear infinite; transform-origin: 224.5px 118.0px;" />
+<rect x="219.5" y="126.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_12_5 21.050000000000043s linear infinite; transform-origin: 224.5px 131.0px;" />
+<rect x="219.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="232.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="232.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="232.5" y="87.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_13_2 21.050000000000043s linear infinite; transform-origin: 237.5px 92.0px;" />
+<rect x="232.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="232.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="232.5" y="126.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_13_5 21.050000000000043s linear infinite; transform-origin: 237.5px 131.0px;" />
+<rect x="232.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="245.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="245.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="245.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="245.5" y="100.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_14_3 21.050000000000043s linear infinite; transform-origin: 250.5px 105.0px;" />
+<rect x="245.5" y="113.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_14_4 21.050000000000043s linear infinite; transform-origin: 250.5px 118.0px;" />
+<rect x="245.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="245.5" y="139.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_14_6 21.050000000000043s linear infinite; transform-origin: 250.5px 144.0px;" />
+<rect x="258.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="258.5" y="74.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_15_1 21.050000000000043s linear infinite; transform-origin: 263.5px 79.0px;" />
+<rect x="258.5" y="87.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_15_2 21.050000000000043s linear infinite; transform-origin: 263.5px 92.0px;" />
+<rect x="258.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="258.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="258.5" y="126.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_15_5 21.050000000000043s linear infinite; transform-origin: 263.5px 131.0px;" />
+<rect x="258.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="271.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="271.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="271.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="271.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="271.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="271.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="271.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="284.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="284.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="284.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="284.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="284.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="284.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="284.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="297.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="297.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="297.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="297.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="297.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="297.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="297.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="310.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="310.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="310.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="310.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="310.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="310.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="310.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="323.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="323.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="323.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="323.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="323.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="323.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="323.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="336.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="336.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="336.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="336.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="336.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="336.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="336.5" y="139.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_21_6 21.050000000000043s linear infinite; transform-origin: 341.5px 144.0px;" />
+<rect x="349.5" y="61.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_22_0 21.050000000000043s linear infinite; transform-origin: 354.5px 66.0px;" />
+<rect x="349.5" y="74.0" width="10" height="10" fill="#26a641" rx="2" style="animation: target_22_1 21.050000000000043s linear infinite; transform-origin: 354.5px 79.0px;" />
+<rect x="349.5" y="87.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_22_2 21.050000000000043s linear infinite; transform-origin: 354.5px 92.0px;" />
+<rect x="349.5" y="100.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_22_3 21.050000000000043s linear infinite; transform-origin: 354.5px 105.0px;" />
+<rect x="349.5" y="113.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_22_4 21.050000000000043s linear infinite; transform-origin: 354.5px 118.0px;" />
+<rect x="349.5" y="126.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_22_5 21.050000000000043s linear infinite; transform-origin: 354.5px 131.0px;" />
+<rect x="349.5" y="139.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_22_6 21.050000000000043s linear infinite; transform-origin: 354.5px 144.0px;" />
+<rect x="362.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="362.5" y="74.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_23_1 21.050000000000043s linear infinite; transform-origin: 367.5px 79.0px;" />
+<rect x="362.5" y="87.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_23_2 21.050000000000043s linear infinite; transform-origin: 367.5px 92.0px;" />
+<rect x="362.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="362.5" y="113.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_23_4 21.050000000000043s linear infinite; transform-origin: 367.5px 118.0px;" />
+<rect x="362.5" y="126.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_23_5 21.050000000000043s linear infinite; transform-origin: 367.5px 131.0px;" />
+<rect x="362.5" y="139.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_23_6 21.050000000000043s linear infinite; transform-origin: 367.5px 144.0px;" />
+<rect x="375.5" y="61.0" width="10" height="10" fill="#26a641" rx="2" style="animation: target_24_0 21.050000000000043s linear infinite; transform-origin: 380.5px 66.0px;" />
+<rect x="375.5" y="74.0" width="10" height="10" fill="#39d353" rx="2" style="animation: target_24_1 21.050000000000043s linear infinite; transform-origin: 380.5px 79.0px;" />
+<rect x="375.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="375.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="375.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="375.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="375.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="388.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="388.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="388.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="388.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="388.5" y="113.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_25_4 21.050000000000043s linear infinite; transform-origin: 393.5px 118.0px;" />
+<rect x="388.5" y="126.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_25_5 21.050000000000043s linear infinite; transform-origin: 393.5px 131.0px;" />
+<rect x="388.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="401.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="401.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="401.5" y="87.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_26_2 21.050000000000043s linear infinite; transform-origin: 406.5px 92.0px;" />
+<rect x="401.5" y="100.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_26_3 21.050000000000043s linear infinite; transform-origin: 406.5px 105.0px;" />
+<rect x="401.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="401.5" y="126.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_26_5 21.050000000000043s linear infinite; transform-origin: 406.5px 131.0px;" />
+<rect x="401.5" y="139.0" width="10" height="10" fill="#26a641" rx="2" style="animation: target_26_6 21.050000000000043s linear infinite; transform-origin: 406.5px 144.0px;" />
+<rect x="414.5" y="61.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_27_0 21.050000000000043s linear infinite; transform-origin: 419.5px 66.0px;" />
+<rect x="414.5" y="74.0" width="10" height="10" fill="#26a641" rx="2" style="animation: target_27_1 21.050000000000043s linear infinite; transform-origin: 419.5px 79.0px;" />
+<rect x="414.5" y="87.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_27_2 21.050000000000043s linear infinite; transform-origin: 419.5px 92.0px;" />
+<rect x="414.5" y="100.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_27_3 21.050000000000043s linear infinite; transform-origin: 419.5px 105.0px;" />
+<rect x="414.5" y="113.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_27_4 21.050000000000043s linear infinite; transform-origin: 419.5px 118.0px;" />
+<rect x="414.5" y="126.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_27_5 21.050000000000043s linear infinite; transform-origin: 419.5px 131.0px;" />
+<rect x="414.5" y="139.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_27_6 21.050000000000043s linear infinite; transform-origin: 419.5px 144.0px;" />
+<rect x="427.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="427.5" y="74.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_28_1 21.050000000000043s linear infinite; transform-origin: 432.5px 79.0px;" />
+<rect x="427.5" y="87.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_28_2 21.050000000000043s linear infinite; transform-origin: 432.5px 92.0px;" />
+<rect x="427.5" y="100.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_28_3 21.050000000000043s linear infinite; transform-origin: 432.5px 105.0px;" />
+<rect x="427.5" y="113.0" width="10" height="10" fill="#0e4429" rx="2" style="animation: target_28_4 21.050000000000043s linear infinite; transform-origin: 432.5px 118.0px;" />
+<rect x="427.5" y="126.0" width="10" height="10" fill="#006d32" rx="2" style="animation: target_28_5 21.050000000000043s linear infinite; transform-origin: 432.5px 131.0px;" />
+<rect x="427.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="440.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="440.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="440.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="440.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="440.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="440.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="440.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="453.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="453.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="453.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="453.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="453.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="453.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="453.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="466.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="466.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="466.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="466.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="466.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="466.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="466.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="479.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="479.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="479.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="479.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="479.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="479.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="479.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="492.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="492.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="492.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="492.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="492.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="492.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="492.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="505.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="505.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="505.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="505.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="505.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="505.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="505.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="518.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="518.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="518.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="518.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="518.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="518.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="518.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="531.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="531.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="531.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="531.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="531.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="531.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="531.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="544.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="544.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="544.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="544.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="544.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="544.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="544.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="557.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="557.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="557.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="557.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="557.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="557.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="557.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="570.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="570.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="570.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="570.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="570.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="570.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="570.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="583.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="583.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="583.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="583.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="583.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="583.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="583.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="596.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="596.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="596.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="596.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="596.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="596.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="596.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="609.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="609.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="609.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="609.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="609.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="609.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="609.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="622.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="622.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="622.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="622.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="622.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="622.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="622.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="635.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="635.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="635.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="635.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="635.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="635.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="635.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="648.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="648.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="648.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="648.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="648.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="648.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="648.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="661.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="661.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="661.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="661.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="661.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="661.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="661.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="674.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="674.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="674.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="674.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="674.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="674.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="674.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="687.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="687.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="687.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="687.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="687.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="687.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="687.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="700.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="700.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="700.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="700.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="700.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="700.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="700.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="713.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="713.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="713.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="713.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="713.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="713.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="713.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="726.5" y="61.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="726.5" y="74.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="726.5" y="87.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="726.5" y="100.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="726.5" y="113.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="726.5" y="126.0" width="10" height="10" fill="#161b22" rx="2" />
+<rect x="726.5" y="139.0" width="10" height="10" fill="#161b22" rx="2" />
+<style>
+@keyframes fly_0 {
+  0%, 6.641% { transform: translateY(0); opacity: 0; }
+  6.651% { transform: translateY(0); opacity: 1; }
+  8.029% { transform: translateY(-58.0px); opacity: 1; }
+  8.039%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_1 {
+  0%, 7.353% { transform: translateY(0); opacity: 0; }
+  7.363% { transform: translateY(0); opacity: 1; }
+  8.836% { transform: translateY(-71.0px); opacity: 1; }
+  8.846%, 100% { transform: translateY(-71.0px); opacity: 0; }
+}
+@keyframes fly_2 {
+  0%, 8.066% { transform: translateY(0); opacity: 0; }
+  8.076% { transform: translateY(0); opacity: 1; }
+  9.644% { transform: translateY(-84.0px); opacity: 1; }
+  9.654%, 100% { transform: translateY(-84.0px); opacity: 0; }
+}
+@keyframes fly_3 {
+  0%, 8.779% { transform: translateY(0); opacity: 0; }
+  8.789% { transform: translateY(0); opacity: 1; }
+  10.451% { transform: translateY(-97.0px); opacity: 1; }
+  10.461%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_4 {
+  0%, 11.391% { transform: translateY(0); opacity: 0; }
+  11.401% { transform: translateY(0); opacity: 1; }
+  12.779% { transform: translateY(-58.0px); opacity: 1; }
+  12.789%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_5 {
+  0%, 12.104% { transform: translateY(0); opacity: 0; }
+  12.114% { transform: translateY(0); opacity: 1; }
+  13.777% { transform: translateY(-97.0px); opacity: 1; }
+  13.787%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_6 {
+  0%, 14.717% { transform: translateY(0); opacity: 0; }
+  14.727% { transform: translateY(0); opacity: 1; }
+  16.010% { transform: translateY(-45.0px); opacity: 1; }
+  16.020%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_7 {
+  0%, 15.429% { transform: translateY(0); opacity: 0; }
+  15.439% { transform: translateY(0); opacity: 1; }
+  16.912% { transform: translateY(-71.0px); opacity: 1; }
+  16.922%, 100% { transform: translateY(-71.0px); opacity: 0; }
+}
+@keyframes fly_8 {
+  0%, 16.142% { transform: translateY(0); opacity: 0; }
+  16.152% { transform: translateY(0); opacity: 1; }
+  17.720% { transform: translateY(-84.0px); opacity: 1; }
+  17.730%, 100% { transform: translateY(-84.0px); opacity: 0; }
+}
+@keyframes fly_9 {
+  0%, 18.755% { transform: translateY(0); opacity: 0; }
+  18.765% { transform: translateY(0); opacity: 1; }
+  20.143% { transform: translateY(-58.0px); opacity: 1; }
+  20.153%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_10 {
+  0%, 19.467% { transform: translateY(0); opacity: 0; }
+  19.477% { transform: translateY(0); opacity: 1; }
+  21.140% { transform: translateY(-97.0px); opacity: 1; }
+  21.150%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_11 {
+  0%, 20.180% { transform: translateY(0); opacity: 0; }
+  20.190% { transform: translateY(0); opacity: 1; }
+  21.948% { transform: translateY(-110.0px); opacity: 1; }
+  21.958%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_12 {
+  0%, 25.168% { transform: translateY(0); opacity: 0; }
+  25.178% { transform: translateY(0); opacity: 1; }
+  26.461% { transform: translateY(-45.0px); opacity: 1; }
+  26.471%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_13 {
+  0%, 27.781% { transform: translateY(0); opacity: 0; }
+  27.791% { transform: translateY(0); opacity: 1; }
+  29.074% { transform: translateY(-45.0px); opacity: 1; }
+  29.084%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_14 {
+  0%, 28.494% { transform: translateY(0); opacity: 0; }
+  28.504% { transform: translateY(0); opacity: 1; }
+  29.786% { transform: translateY(-45.0px); opacity: 1; }
+  29.796%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_15 {
+  0%, 29.206% { transform: translateY(0); opacity: 0; }
+  29.216% { transform: translateY(0); opacity: 1; }
+  30.594% { transform: translateY(-58.0px); opacity: 1; }
+  30.604%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_16 {
+  0%, 29.919% { transform: translateY(0); opacity: 0; }
+  29.929% { transform: translateY(0); opacity: 1; }
+  31.401% { transform: translateY(-71.0px); opacity: 1; }
+  31.411%, 100% { transform: translateY(-71.0px); opacity: 0; }
+}
+@keyframes fly_17 {
+  0%, 30.631% { transform: translateY(0); opacity: 0; }
+  30.641% { transform: translateY(0); opacity: 1; }
+  32.209% { transform: translateY(-84.0px); opacity: 1; }
+  32.219%, 100% { transform: translateY(-84.0px); opacity: 0; }
+}
+@keyframes fly_18 {
+  0%, 31.344% { transform: translateY(0); opacity: 0; }
+  31.354% { transform: translateY(0); opacity: 1; }
+  32.922% { transform: translateY(-84.0px); opacity: 1; }
+  32.932%, 100% { transform: translateY(-84.0px); opacity: 0; }
+}
+@keyframes fly_19 {
+  0%, 32.057% { transform: translateY(0); opacity: 0; }
+  32.067% { transform: translateY(0); opacity: 1; }
+  33.729% { transform: translateY(-97.0px); opacity: 1; }
+  33.739%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_20 {
+  0%, 32.769% { transform: translateY(0); opacity: 0; }
+  32.779% { transform: translateY(0); opacity: 1; }
+  34.442% { transform: translateY(-97.0px); opacity: 1; }
+  34.452%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_21 {
+  0%, 33.482% { transform: translateY(0); opacity: 0; }
+  33.492% { transform: translateY(0); opacity: 1; }
+  35.249% { transform: translateY(-110.0px); opacity: 1; }
+  35.259%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_22 {
+  0%, 34.194% { transform: translateY(0); opacity: 0; }
+  34.204% { transform: translateY(0); opacity: 1; }
+  35.962% { transform: translateY(-110.0px); opacity: 1; }
+  35.972%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_23 {
+  0%, 34.907% { transform: translateY(0); opacity: 0; }
+  34.917% { transform: translateY(0); opacity: 1; }
+  36.675% { transform: translateY(-110.0px); opacity: 1; }
+  36.685%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_24 {
+  0%, 35.619% { transform: translateY(0); opacity: 0; }
+  35.629% { transform: translateY(0); opacity: 1; }
+  37.482% { transform: translateY(-123.0px); opacity: 1; }
+  37.492%, 100% { transform: translateY(-123.0px); opacity: 0; }
+}
+@keyframes fly_25 {
+  0%, 38.232% { transform: translateY(0); opacity: 0; }
+  38.242% { transform: translateY(0); opacity: 1; }
+  39.525% { transform: translateY(-45.0px); opacity: 1; }
+  39.535%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_26 {
+  0%, 38.945% { transform: translateY(0); opacity: 0; }
+  38.955% { transform: translateY(0); opacity: 1; }
+  40.333% { transform: translateY(-58.0px); opacity: 1; }
+  40.343%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_27 {
+  0%, 39.657% { transform: translateY(0); opacity: 0; }
+  39.667% { transform: translateY(0); opacity: 1; }
+  41.045% { transform: translateY(-58.0px); opacity: 1; }
+  41.055%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_28 {
+  0%, 40.370% { transform: translateY(0); opacity: 0; }
+  40.380% { transform: translateY(0); opacity: 1; }
+  41.853% { transform: translateY(-71.0px); opacity: 1; }
+  41.863%, 100% { transform: translateY(-71.0px); opacity: 0; }
+}
+@keyframes fly_29 {
+  0%, 41.083% { transform: translateY(0); opacity: 0; }
+  41.093% { transform: translateY(0); opacity: 1; }
+  42.755% { transform: translateY(-97.0px); opacity: 1; }
+  42.765%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_30 {
+  0%, 41.795% { transform: translateY(0); opacity: 0; }
+  41.805% { transform: translateY(0); opacity: 1; }
+  43.468% { transform: translateY(-97.0px); opacity: 1; }
+  43.478%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_31 {
+  0%, 42.508% { transform: translateY(0); opacity: 0; }
+  42.518% { transform: translateY(0); opacity: 1; }
+  44.276% { transform: translateY(-110.0px); opacity: 1; }
+  44.286%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_32 {
+  0%, 43.220% { transform: translateY(0); opacity: 0; }
+  43.230% { transform: translateY(0); opacity: 1; }
+  44.988% { transform: translateY(-110.0px); opacity: 1; }
+  44.998%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_33 {
+  0%, 45.833% { transform: translateY(0); opacity: 0; }
+  45.843% { transform: translateY(0); opacity: 1; }
+  47.601% { transform: translateY(-110.0px); opacity: 1; }
+  47.611%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_34 {
+  0%, 46.546% { transform: translateY(0); opacity: 0; }
+  46.556% { transform: translateY(0); opacity: 1; }
+  48.314% { transform: translateY(-110.0px); opacity: 1; }
+  48.324%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_35 {
+  0%, 47.258% { transform: translateY(0); opacity: 0; }
+  47.268% { transform: translateY(0); opacity: 1; }
+  49.026% { transform: translateY(-110.0px); opacity: 1; }
+  49.036%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_36 {
+  0%, 47.971% { transform: translateY(0); opacity: 0; }
+  47.981% { transform: translateY(0); opacity: 1; }
+  49.739% { transform: translateY(-110.0px); opacity: 1; }
+  49.749%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_37 {
+  0%, 48.684% { transform: translateY(0); opacity: 0; }
+  48.694% { transform: translateY(0); opacity: 1; }
+  50.546% { transform: translateY(-123.0px); opacity: 1; }
+  50.556%, 100% { transform: translateY(-123.0px); opacity: 0; }
+}
+@keyframes fly_38 {
+  0%, 49.396% { transform: translateY(0); opacity: 0; }
+  49.406% { transform: translateY(0); opacity: 1; }
+  51.259% { transform: translateY(-123.0px); opacity: 1; }
+  51.269%, 100% { transform: translateY(-123.0px); opacity: 0; }
+}
+@keyframes fly_39 {
+  0%, 50.109% { transform: translateY(0); opacity: 0; }
+  50.119% { transform: translateY(0); opacity: 1; }
+  51.971% { transform: translateY(-123.0px); opacity: 1; }
+  51.981%, 100% { transform: translateY(-123.0px); opacity: 0; }
+}
+@keyframes fly_40 {
+  0%, 52.722% { transform: translateY(0); opacity: 0; }
+  52.732% { transform: translateY(0); opacity: 1; }
+  54.109% { transform: translateY(-58.0px); opacity: 1; }
+  54.119%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_41 {
+  0%, 53.434% { transform: translateY(0); opacity: 0; }
+  53.444% { transform: translateY(0); opacity: 1; }
+  54.917% { transform: translateY(-71.0px); opacity: 1; }
+  54.927%, 100% { transform: translateY(-71.0px); opacity: 0; }
+}
+@keyframes fly_42 {
+  0%, 56.047% { transform: translateY(0); opacity: 0; }
+  56.057% { transform: translateY(0); opacity: 1; }
+  57.340% { transform: translateY(-45.0px); opacity: 1; }
+  57.350%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_43 {
+  0%, 56.760% { transform: translateY(0); opacity: 0; }
+  56.770% { transform: translateY(0); opacity: 1; }
+  58.052% { transform: translateY(-45.0px); opacity: 1; }
+  58.062%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_44 {
+  0%, 57.472% { transform: translateY(0); opacity: 0; }
+  57.482% { transform: translateY(0); opacity: 1; }
+  58.765% { transform: translateY(-45.0px); opacity: 1; }
+  58.775%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_45 {
+  0%, 58.185% { transform: translateY(0); opacity: 0; }
+  58.195% { transform: translateY(0); opacity: 1; }
+  59.572% { transform: translateY(-58.0px); opacity: 1; }
+  59.582%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_46 {
+  0%, 58.897% { transform: translateY(0); opacity: 0; }
+  58.907% { transform: translateY(0); opacity: 1; }
+  60.285% { transform: translateY(-58.0px); opacity: 1; }
+  60.295%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_47 {
+  0%, 59.610% { transform: translateY(0); opacity: 0; }
+  59.620% { transform: translateY(0); opacity: 1; }
+  61.188% { transform: translateY(-84.0px); opacity: 1; }
+  61.198%, 100% { transform: translateY(-84.0px); opacity: 0; }
+}
+@keyframes fly_48 {
+  0%, 60.323% { transform: translateY(0); opacity: 0; }
+  60.333% { transform: translateY(0); opacity: 1; }
+  61.995% { transform: translateY(-97.0px); opacity: 1; }
+  62.005%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_49 {
+  0%, 62.935% { transform: translateY(0); opacity: 0; }
+  62.945% { transform: translateY(0); opacity: 1; }
+  64.228% { transform: translateY(-45.0px); opacity: 1; }
+  64.238%, 100% { transform: translateY(-45.0px); opacity: 0; }
+}
+@keyframes fly_50 {
+  0%, 63.648% { transform: translateY(0); opacity: 0; }
+  63.658% { transform: translateY(0); opacity: 1; }
+  65.036% { transform: translateY(-58.0px); opacity: 1; }
+  65.046%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_51 {
+  0%, 64.361% { transform: translateY(0); opacity: 0; }
+  64.371% { transform: translateY(0); opacity: 1; }
+  65.843% { transform: translateY(-71.0px); opacity: 1; }
+  65.853%, 100% { transform: translateY(-71.0px); opacity: 0; }
+}
+@keyframes fly_52 {
+  0%, 65.073% { transform: translateY(0); opacity: 0; }
+  65.083% { transform: translateY(0); opacity: 1; }
+  66.651% { transform: translateY(-84.0px); opacity: 1; }
+  66.661%, 100% { transform: translateY(-84.0px); opacity: 0; }
+}
+@keyframes fly_53 {
+  0%, 65.786% { transform: translateY(0); opacity: 0; }
+  65.796% { transform: translateY(0); opacity: 1; }
+  67.458% { transform: translateY(-97.0px); opacity: 1; }
+  67.468%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_54 {
+  0%, 66.498% { transform: translateY(0); opacity: 0; }
+  66.508% { transform: translateY(0); opacity: 1; }
+  68.266% { transform: translateY(-110.0px); opacity: 1; }
+  68.276%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_55 {
+  0%, 67.211% { transform: translateY(0); opacity: 0; }
+  67.221% { transform: translateY(0); opacity: 1; }
+  68.979% { transform: translateY(-110.0px); opacity: 1; }
+  68.989%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_56 {
+  0%, 67.923% { transform: translateY(0); opacity: 0; }
+  67.933% { transform: translateY(0); opacity: 1; }
+  69.691% { transform: translateY(-110.0px); opacity: 1; }
+  69.701%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+@keyframes fly_57 {
+  0%, 68.636% { transform: translateY(0); opacity: 0; }
+  68.646% { transform: translateY(0); opacity: 1; }
+  70.499% { transform: translateY(-123.0px); opacity: 1; }
+  70.509%, 100% { transform: translateY(-123.0px); opacity: 0; }
+}
+@keyframes fly_58 {
+  0%, 69.349% { transform: translateY(0); opacity: 0; }
+  69.359% { transform: translateY(0); opacity: 1; }
+  71.211% { transform: translateY(-123.0px); opacity: 1; }
+  71.221%, 100% { transform: translateY(-123.0px); opacity: 0; }
+}
+@keyframes fly_59 {
+  0%, 71.961% { transform: translateY(0); opacity: 0; }
+  71.971% { transform: translateY(0); opacity: 1; }
+  73.349% { transform: translateY(-58.0px); opacity: 1; }
+  73.359%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_60 {
+  0%, 72.674% { transform: translateY(0); opacity: 0; }
+  72.684% { transform: translateY(0); opacity: 1; }
+  74.062% { transform: translateY(-58.0px); opacity: 1; }
+  74.072%, 100% { transform: translateY(-58.0px); opacity: 0; }
+}
+@keyframes fly_61 {
+  0%, 73.387% { transform: translateY(0); opacity: 0; }
+  73.397% { transform: translateY(0); opacity: 1; }
+  74.869% { transform: translateY(-71.0px); opacity: 1; }
+  74.879%, 100% { transform: translateY(-71.0px); opacity: 0; }
+}
+@keyframes fly_62 {
+  0%, 74.099% { transform: translateY(0); opacity: 0; }
+  74.109% { transform: translateY(0); opacity: 1; }
+  75.677% { transform: translateY(-84.0px); opacity: 1; }
+  75.687%, 100% { transform: translateY(-84.0px); opacity: 0; }
+}
+@keyframes fly_63 {
+  0%, 74.812% { transform: translateY(0); opacity: 0; }
+  74.822% { transform: translateY(0); opacity: 1; }
+  76.485% { transform: translateY(-97.0px); opacity: 1; }
+  76.495%, 100% { transform: translateY(-97.0px); opacity: 0; }
+}
+@keyframes fly_64 {
+  0%, 75.524% { transform: translateY(0); opacity: 0; }
+  75.534% { transform: translateY(0); opacity: 1; }
+  77.292% { transform: translateY(-110.0px); opacity: 1; }
+  77.302%, 100% { transform: translateY(-110.0px); opacity: 0; }
+}
+</style>
+<rect x="223.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_0 21.050000000000043s linear infinite;" />
+<rect x="223.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_1 21.050000000000043s linear infinite;" />
+<rect x="223.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_2 21.050000000000043s linear infinite;" />
+<rect x="223.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_3 21.050000000000043s linear infinite;" />
+<rect x="236.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_4 21.050000000000043s linear infinite;" />
+<rect x="236.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_5 21.050000000000043s linear infinite;" />
+<rect x="249.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_6 21.050000000000043s linear infinite;" />
+<rect x="249.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_7 21.050000000000043s linear infinite;" />
+<rect x="249.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_8 21.050000000000043s linear infinite;" />
+<rect x="262.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_9 21.050000000000043s linear infinite;" />
+<rect x="262.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_10 21.050000000000043s linear infinite;" />
+<rect x="262.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_11 21.050000000000043s linear infinite;" />
+<rect x="340.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_12 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_13 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_14 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_15 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_16 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_17 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_18 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_19 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_20 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_21 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_22 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_23 21.050000000000043s linear infinite;" />
+<rect x="353.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_24 21.050000000000043s linear infinite;" />
+<rect x="366.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_25 21.050000000000043s linear infinite;" />
+<rect x="366.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_26 21.050000000000043s linear infinite;" />
+<rect x="366.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_27 21.050000000000043s linear infinite;" />
+<rect x="366.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_28 21.050000000000043s linear infinite;" />
+<rect x="366.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_29 21.050000000000043s linear infinite;" />
+<rect x="366.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_30 21.050000000000043s linear infinite;" />
+<rect x="366.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_31 21.050000000000043s linear infinite;" />
+<rect x="366.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_32 21.050000000000043s linear infinite;" />
+<rect x="379.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_33 21.050000000000043s linear infinite;" />
+<rect x="379.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_34 21.050000000000043s linear infinite;" />
+<rect x="379.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_35 21.050000000000043s linear infinite;" />
+<rect x="379.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_36 21.050000000000043s linear infinite;" />
+<rect x="379.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_37 21.050000000000043s linear infinite;" />
+<rect x="379.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_38 21.050000000000043s linear infinite;" />
+<rect x="379.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_39 21.050000000000043s linear infinite;" />
+<rect x="392.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_40 21.050000000000043s linear infinite;" />
+<rect x="392.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_41 21.050000000000043s linear infinite;" />
+<rect x="405.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_42 21.050000000000043s linear infinite;" />
+<rect x="405.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_43 21.050000000000043s linear infinite;" />
+<rect x="405.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_44 21.050000000000043s linear infinite;" />
+<rect x="405.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_45 21.050000000000043s linear infinite;" />
+<rect x="405.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_46 21.050000000000043s linear infinite;" />
+<rect x="405.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_47 21.050000000000043s linear infinite;" />
+<rect x="405.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_48 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_49 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_50 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_51 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_52 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_53 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_54 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_55 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_56 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_57 21.050000000000043s linear infinite;" />
+<rect x="418.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_58 21.050000000000043s linear infinite;" />
+<rect x="431.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_59 21.050000000000043s linear infinite;" />
+<rect x="431.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_60 21.050000000000043s linear infinite;" />
+<rect x="431.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_61 21.050000000000043s linear infinite;" />
+<rect x="431.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_62 21.050000000000043s linear infinite;" />
+<rect x="431.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_63 21.050000000000043s linear infinite;" />
+<rect x="431.5" y="189.0" width="2" height="8" fill="#f2cc60" rx="1" style="animation: fly_64 21.050000000000043s linear infinite;" />
+<g style="animation: ship_move 21.050000000000043s linear infinite;">
+  <path d="M 0 -10 L 10 10 L 0 5 L -10 10 Z" fill="#58a6ff" stroke="#1f6feb" stroke-width="1" transform="translate(0, 189.0)" />
+  <circle cx="0" cy="199.0" r="3" fill="#39d353" filter="blur(2px)" />
+</g>
+</svg>

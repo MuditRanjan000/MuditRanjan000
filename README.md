@@ -72,10 +72,10 @@
 
 <br/>
 
-## 💎 Crystal Growth Energy-Minimization
+## 🎀 Elastic Ribbon Field
 
 <div align="center">
-  <img alt="github contribution crystal growth" src="https://raw.githubusercontent.com/MuditRanjan000/MuditRanjan000/output/github-contribution-crystal.svg">
+  <img alt="GitHub Contribution Elastic Ribbon Field" src="ribbon_field.svg">
 </div>
 
 <br/>

@@ -1,0 +1,30 @@
+name: Generate Elastic Ribbon Field
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Generate Ribbon Field
+        env:
+          GH_CONTRIB_PAT: ${{ secrets.GH_CONTRIB_PAT }}
+        run: python .github/scripts/ribbon_field.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ribbon_field.svg
+          git commit -m "Update Ribbon Field [skip ci]" || exit 0
+          git push
