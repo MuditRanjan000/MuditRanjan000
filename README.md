@@ -63,11 +63,11 @@
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://my-github-stats-three-silk.vercel.app/api?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+  <img src="https://my-github-stats-three-silk.vercel.app/api?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=false&count_private=true" alt="GitHub Stats" />
   <br/>
   <img src="https://streak-stats.demolab.com/?user=MuditRanjan000&theme=dark&hide_border=true" alt="GitHub Streak" />
   <br/>
-  <img src="https://my-github-stats-three-silk.vercel.app/api/top-langs/?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages" />
+  <img src="https://my-github-stats-three-silk.vercel.app/api/top-langs/?username=MuditRanjan000&theme=dark&hide_border=true&include_all_commits=false&count_private=true&layout=compact" alt="Top Languages" />
 </div>
 
 <br/>
