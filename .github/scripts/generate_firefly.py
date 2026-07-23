@@ -46,7 +46,6 @@ if "errors" in result:
 calendar = result["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]
 weeks = calendar["weeks"]
 
-# Only take the last 52 weeks to form a clean grid
 if len(weeks) == 53:
     weeks = weeks[1:]
 
@@ -71,12 +70,7 @@ else:
     q1 = all_counts[len(all_counts) // 4]
     q2 = all_counts[len(all_counts) // 2]
     q3 = all_counts[(len(all_counts) * 3) // 4]
-    quartiles = [
-        max(1, q1),
-        max(2, q2),
-        max(3, q3),
-        all_counts[-1]
-    ]
+    quartiles = [max(1, q1), max(2, q2), max(3, q3), all_counts[-1]]
 
 def get_color(count):
     if count == 0: return "#161b22"
@@ -95,7 +89,6 @@ off_y = 20
 svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">']
 svg.append(f'<rect width="{WIDTH}" height="{HEIGHT}" fill="#0d1117" rx="8" />')
 
-# Flatten rows into a chronological 1D list of cells
 cells = []
 for c in range(52):
     for r in range(7):
@@ -106,30 +99,33 @@ for c in range(52):
                 "row": r,
                 "x": off_x + c * PITCH,
                 "y": off_y + r * PITCH,
-                "count": cell["count"],
-                "date": cell["date"]
+                "count": cell["count"]
             })
 
 total_cells = len(cells)
-hop_time = 0.15  # Slower, smoother hops
 max_count = quartiles[-1] if quartiles[-1] > 0 else 1
 
+def ease_in_out_quad(t):
+    return 2 * t * t if t < 0.5 else -1 + (4 - 2 * t) * t
+
+# Pre-calculate timeline and pacing to ensure buttery smooth movement
 current_time = 0.0
 for i, cell in enumerate(cells):
     if i > 0:
-        current_time += hop_time
+        # Much slower and satisfying hops. Skip fast over empty days.
+        hop = 0.10 if cell["count"] == 0 else 0.25
+        current_time += hop
     
-    # Exaggerated Pacing: longer pauses on intense days to feel the rhythm
-    c_pause = 0.0 if cell["count"] == 0 else 0.05 + (cell["count"] / max_count) * 0.25
+    # Pauses: 0 for empty, scales up to 0.5s for max density
+    c_pause = 0.0 if cell["count"] == 0 else 0.1 + (cell["count"] / max_count) * 0.4
     cell["arrival_time"] = current_time
     current_time += c_pause
 
-total_duration = current_time + 3.0  # +3s full board pause
+total_duration = current_time + 4.0  # +4s full board pause at the end
 
 cell_arrival_times = []
 motion_key_times = []
 translate_values = []
-motion_key_splines = []
 
 current_time = 0.0
 
@@ -138,10 +134,10 @@ for i, cell in enumerate(cells):
     
     if i == 0:
         motion_key_times.append(0.0)
-        translate_values.append(f"{x},{y}")
+        translate_values.append(f"{x:.1f},{y:.1f}")
         cell_arrival_times.append(0.0)
     else:
-        # Hop
+        # Bake the Bezier curve and easing directly into discrete coordinate frames
         px, py = cells[i-1]["x"] + 6, cells[i-1]["y"] + 6
         dx = x - px
         dy = y - py
@@ -150,45 +146,44 @@ for i, cell in enumerate(cells):
         
         mx, my = px + dx / 2, py + dy / 2
         nx, ny = -dy / dist, dx / dist
-        arc_h = 15 if dx > 0 else 8  # More pronounced vertical arc
-        qx, qy = mx + nx * arc_h, my + ny * arc_h
+        arc_h = 15 if dx > 0 else 6
+        cx, cy = mx + nx * arc_h, my + ny * arc_h
         
-        # Midpoint of hop (Accelerate UP)
-        mid_time = current_time + hop_time / 2
-        motion_key_times.append(mid_time / total_duration)
-        translate_values.append(f"{qx:.1f},{qy:.1f}")
-        motion_key_splines.append("0.33 0.0 1.0 1.0") # ease-in
+        hop = 0.10 if cell["count"] == 0 else 0.25
+        steps = 6 # 6 sub-frames per hop for perfect smoothness
         
-        # End of hop (Decelerate DOWN)
-        current_time += hop_time
-        t = current_time / total_duration
-        motion_key_times.append(t)
-        translate_values.append(f"{x},{y}")
-        cell_arrival_times.append(t)
-        motion_key_splines.append("0.0 0.0 0.67 1.0") # ease-out
+        for j in range(1, steps + 1):
+            t_linear = j / steps
+            t_eased = ease_in_out_quad(t_linear)
+            
+            # Quadratic Bezier Formula
+            bx = (1 - t_eased)**2 * px + 2 * (1 - t_eased) * t_eased * cx + t_eased**2 * x
+            by = (1 - t_eased)**2 * py + 2 * (1 - t_eased) * t_eased * cy + t_eased**2 * y
+            
+            t_frame = current_time + (hop * t_linear)
+            motion_key_times.append(t_frame / total_duration)
+            translate_values.append(f"{bx:.1f},{by:.1f}")
+            
+        current_time += hop
+        cell_arrival_times.append(current_time / total_duration)
         
-    # Pause
-    c_pause = 0.0 if cell["count"] == 0 else 0.05 + (cell["count"] / max_count) * 0.25
+    c_pause = 0.0 if cell["count"] == 0 else 0.1 + (cell["count"] / max_count) * 0.4
     current_time += c_pause
-    t = current_time / total_duration
-    motion_key_times.append(t)
-    translate_values.append(f"{x},{y}")
-    if len(motion_key_times) > 1:
-        motion_key_splines.append("1.0 0.0 1.0 1.0")
+    motion_key_times.append(current_time / total_duration)
+    translate_values.append(f"{x:.1f},{y:.1f}")
 
-while len(motion_key_splines) >= len(motion_key_times):
-    motion_key_splines.pop()
-
-# Final hold
 motion_key_times.append(1.0)
-translate_values.append(f'{cells[-1]["x"] + 6},{cells[-1]["y"] + 6}')
-motion_key_splines.append("1.0 0.0 1.0 1.0")
+translate_values.append(f'{cells[-1]["x"] + 6:.1f},{cells[-1]["y"] + 6:.1f}')
+
+# Ensure motion_key_times strictly increases
+for i in range(1, len(motion_key_times)):
+    if motion_key_times[i] <= motion_key_times[i-1]:
+        motion_key_times[i] = motion_key_times[i-1] + 0.00001
 
 for i, c in enumerate(cells):
-    x = c["x"]
-    y = c["y"]
-    
+    x, y = c["x"], c["y"]
     lit_color = get_color(c["count"])
+    
     if lit_color == "#161b22":
         svg.append(f'<rect x="{x}" y="{y}" width="12" height="12" fill="#161b22" rx="2" />')
         continue
@@ -197,31 +192,28 @@ for i, c in enumerate(cells):
     
     arrival_t = cell_arrival_times[i]
     fade_t = (total_duration - 1.0) / total_duration
-    pre_arrival = max(0.0, arrival_t - 0.001)
+    pre_arrival = max(0.0, arrival_t - 0.0001)
     
+    kt = f"0; {pre_arrival:.5f}; {arrival_t:.5f}; {fade_t:.5f}; {fade_t+0.01:.5f}; 1"
+    kv_fill = f"#161b22; #161b22; {lit_color}; {lit_color}; #161b22; #161b22"
     if arrival_t == 0.0:
         kt = f"0; {fade_t:.5f}; {fade_t+0.01:.5f}; 1"
         kv_fill = f"{lit_color}; {lit_color}; #161b22; #161b22"
-    else:
-        kt = f"0; {pre_arrival:.5f}; {arrival_t:.5f}; {fade_t:.5f}; {fade_t+0.01:.5f}; 1"
-        kv_fill = f"#161b22; #161b22; {lit_color}; {lit_color}; #161b22; #161b22"
         
     svg.append(f'  <animate attributeName="fill" values="{kv_fill}" keyTimes="{kt}" dur="{total_duration:.1f}s" repeatCount="indefinite" />')
     
-    # Tactile Cells: Pop animation
-    pop_t = min(1.0, arrival_t + 0.1/total_duration)
+    pop_t = min(1.0, arrival_t + 0.15/total_duration)
+    kt_pop = f"0; {pre_arrival:.5f}; {arrival_t:.5f}; {pop_t:.5f}; 1"
+    kv_w = f"12; 12; 14; 12; 12"
+    kv_h = f"12; 12; 14; 12; 12"
+    kv_x = f"{x}; {x}; {x-1}; {x}; {x}"
+    kv_y = f"{y}; {y}; {y-1}; {y}; {y}"
     if arrival_t == 0.0:
         kt_pop = f"0; {pop_t:.5f}; 1"
         kv_w = f"14; 12; 12"
         kv_h = f"14; 12; 12"
         kv_x = f"{x-1}; {x}; {x}"
         kv_y = f"{y-1}; {y}; {y}"
-    else:
-        kt_pop = f"0; {pre_arrival:.5f}; {arrival_t:.5f}; {pop_t:.5f}; 1"
-        kv_w = f"12; 12; 14; 12; 12"
-        kv_h = f"12; 12; 14; 12; 12"
-        kv_x = f"{x}; {x}; {x-1}; {x}; {x}"
-        kv_y = f"{y}; {y}; {y-1}; {y}; {y}"
         
     svg.append(f'  <animate attributeName="width" values="{kv_w}" keyTimes="{kt_pop}" dur="{total_duration:.1f}s" repeatCount="indefinite" />')
     svg.append(f'  <animate attributeName="height" values="{kv_h}" keyTimes="{kt_pop}" dur="{total_duration:.1f}s" repeatCount="indefinite" />')
@@ -232,17 +224,17 @@ for i, c in enumerate(cells):
 
 kt_str = ";".join(f"{kt:.5f}" for kt in motion_key_times)
 trans_str = ";".join(translate_values)
-splines_str = ";".join(motion_key_splines)
 
 svg.append(f'<g>')
-svg.append(f'  <animateTransform attributeName="transform" type="translate" values="{trans_str}" keyTimes="{kt_str}" keySplines="{splines_str}" calcMode="spline" dur="{total_duration:.1f}s" repeatCount="indefinite" />')
+# Linear calculation over highly sampled points replaces buggy SMIL splines entirely
+svg.append(f'  <animateTransform attributeName="transform" type="translate" values="{trans_str}" keyTimes="{kt_str}" calcMode="linear" dur="{total_duration:.1f}s" repeatCount="indefinite" />')
 svg.append(f'  <g>')
 
 bounce_kt = []
 bounce_kv = []
 for i in range(total_cells):
     arr_pct = cell_arrival_times[i]
-    pre_arr = max(0.0, arr_pct - 0.001)
+    pre_arr = max(0.0, arr_pct - 0.0001)
     
     if arr_pct > 0.0:
         bounce_kt.append(f"{pre_arr:.5f}")
@@ -251,11 +243,11 @@ for i in range(total_cells):
     bounce_kt.append(f"{arr_pct:.5f}")
     bounce_kv.append("0.5")
     
-    stretch_t = min(1.0, arr_pct + 0.05/total_duration)
+    stretch_t = min(1.0, arr_pct + 0.08/total_duration)
     bounce_kt.append(f"{stretch_t:.5f}")
     bounce_kv.append("1.5")
     
-    settle_t = min(1.0, arr_pct + 0.1/total_duration)
+    settle_t = min(1.0, arr_pct + 0.15/total_duration)
     bounce_kt.append(f"{settle_t:.5f}")
     bounce_kv.append("1")
 
@@ -271,4 +263,4 @@ svg.append('</svg>')
 
 with open("github-contribution-firefly.svg", "w", encoding="utf-8") as f:
     f.write('\n'.join(svg))
-print("Generated github-contribution-firefly.svg")
+print("Generated super smooth firefly.")
