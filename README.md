@@ -72,10 +72,10 @@
 
 <br/>
 
-## 🎀 Elastic Ribbon Field
+## 🏮 GitHub Contribution Firefly
 
 <div align="center">
-  <img alt="GitHub Contribution Elastic Ribbon Field" src="ribbon_field.svg">
+  <img alt="GitHub Contribution Firefly Lantern-Lighter" src="github-contribution-firefly.svg">
 </div>
 
 <br/>

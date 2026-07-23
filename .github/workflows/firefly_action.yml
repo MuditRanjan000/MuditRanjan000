@@ -1,4 +1,4 @@
-name: Generate Elastic Ribbon Field
+name: Generate Firefly Lantern-Lighter
 
 on:
   schedule:
@@ -18,15 +18,15 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Generate Ribbon Field
+      - name: Generate Firefly Field
         env:
           GH_CONTRIB_PAT: ${{ secrets.GH_CONTRIB_PAT }}
-        run: python .github/scripts/ribbon_field.py
+        run: python .github/scripts/generate_firefly.py
 
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ribbon_field.svg
-          git commit -m "Update Ribbon Field [skip ci]" || exit 0
+          git add github-contribution-firefly.svg
+          git commit -m "Update Firefly Field [skip ci]" || exit 0
           git push
