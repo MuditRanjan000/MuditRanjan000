@@ -38,8 +38,6 @@
 ![LangChain](https://img.shields.io/badge/LangChain-%23000000.svg?style=for-the-badge)
 ![LangGraph](https://img.shields.io/badge/LangGraph-%23000000.svg?style=for-the-badge)
 ![Pydantic](https://img.shields.io/badge/Pydantic-%23E92063.svg?style=for-the-badge&logo=pydantic&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) 
-![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) 
 ![RAG](https://img.shields.io/badge/RAG-Architecture-%233B82F6.svg?style=for-the-badge)
 ![Generative AI](https://img.shields.io/badge/Generative_AI-%23000000.svg?style=for-the-badge)
 
